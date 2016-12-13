@@ -31,7 +31,7 @@ class LoginForm extends Component{
   render() {
     return (
       <div>
-        <button id="login-image" onClick={this.switchVisible}>Sign In</button>
+        <button id="sign-in" onClick={this.switchVisible}>Sign In</button>
           { this.state.loginform ? <div className="wrap">
             <form className="form" id="login-form" onSubmit={this.submitLoginInfo} >
               <label>Log In</label><br />
