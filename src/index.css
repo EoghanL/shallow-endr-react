@@ -9,12 +9,29 @@ input[type="checkbox"] {
   float: left;
 }
 
+form input {
+  font-size: 18px
+}
+
+form button[type="submit"] {
+  font-size: 18px;
+  color: #808589;
+  background: rgb(255, 255,	255);
+  border: 2px solid #FFC56B;
+}
+
+button[type="submit"]:hover {
+  border: 5px solid #FFC56B;
+}
+
 .songs-with-checkboxes li {
   position:relative;
 }
 
-  input[type="submit"]:hover {
-      border: 2px solid #FFC56B;
+
+
+  button[type="submit"] {
+    width: 100%;
   }
 
   body {
@@ -72,35 +89,30 @@ input[type="checkbox"] {
   background: rgba(241,	246,	249, .7	);
   width: 70%;
   align-self: center;
-  /*padding-bottom: 200px;
-  border-bottom: 200px;*/
 }
 
 ::-webkit-input-placeholder {
    text-align: center;
    color: #808589;
-   font-family: 'Open Sans', sans-serif;
+   /*font:600 16px/22px 'Open Sans',sans-serif;*/
+
 }
 
 :-moz-placeholder { /* Firefox 18- */
    text-align: center;
-   font-family: 'Open Sans', sans-serif;
+   /*font:600 16px/22px 'Open Sans',sans-serif;*/
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    text-align: center;
    color: #808589;
-   font-family: 'Open Sans', sans-serif;
+   /*font:600 16px/22px 'Open Sans',sans-serif;*/
 }
 
 :-ms-input-placeholder {
    text-align: center;
    color: #808589;
-   font-family: 'Open Sans', sans-serif;
-}
-
-#nav {
-  max-height: 150px;
+   /*font:600 16px/22px 'Open Sans',sans-serif;*/
 }
 
 #login-image {
@@ -174,13 +186,15 @@ html {
 	color:white;
 	background:rgb(117,	155,176	);
 	font:600 20px/22px 'Open Sans',sans-serif;
+  text-align: center;
   float: right;
-	margin:auto;
+  line-height: 1.7em;
+	margin:10px;
   top: 100px;
   clear: both;
 	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
 }
 
-.form{
+.form {
 	padding:30px 30px 30px 30px;
 }
