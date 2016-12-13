@@ -55,8 +55,8 @@ class App extends Component {
         {localStorage.jwt ?
           <div>
             <h3 id="welcome-back">Welcome back!</h3>
-            <button className="register-image" onClick={this.handleLogoutClick}>Logout</button>
-            <button id="login-image" onClick={this.handleSuggestionClick}>Saved Songs</button>
+            <button className="register" onClick={this.handleLogoutClick}>Logout</button>
+            <button id="sign-in" onClick={this.handleSuggestionClick}>Saved Songs</button>
           </div>
           :
           <div>

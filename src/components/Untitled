@@ -1,0 +1,26 @@
+def merge_sort(array
+  min = 0
+  max = array.length - 1
+  mid = array.length/2.to_i
+  if array[mid] > min
+    array[mid] = min
+end
+
+
+first_half = [1,3,4,6]
+second_half = [2,5,9]
+
+merge(first_half, second_half)
+
+def merge(first_half, second_half)
+  sorted = []
+until first_half.length==0 || second_half.length== 0
+  if first_half[0] > second_half[0]
+    array3 << second_half[0]
+    second_half.shift
+  else
+    sorted << first_half[0]
+    first_half.shift
+  end
+  sorted.concat(first_half).concat(second_half)
+end

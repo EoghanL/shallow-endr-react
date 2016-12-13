@@ -6,6 +6,8 @@ export default class SignUpForm extends Component {
   constructor(props){
     super(props)
     this.submitSignUp = this.submitSignUp.bind(this)
+    this.switchVisible = this.switchVisible.bind(this)
+    this.state = {signupform: false}
   }
 
   submitSignUp(event){
@@ -24,31 +26,18 @@ export default class SignUpForm extends Component {
     } else {
       alert('yo pass is fd')
     }
-    // debugger
-    // document.getElementsByClassName('register-image')[0].style.display = '';
-
   }
 
-  switchVisible(event) {
-    if (document.getElementsByClassName('image')) {
-      if (document.getElementsByClassName('wrap')[0].style.display === '') {
-        document.getElementsByClassName('wrap')[0].style.display = 'block';
-      //     document.getElementById('Div2').style.display = 'none';
-      }
-      else {
-          document.getElementsByClassName('wrap')[0].style.display = '';
-      //     document.getElementById('Div2').style.display = 'block';
-      }
-    }
-  }
-
+switchVisible(event) {
+  this.setState({signupform: !this.state.signupform})
+}
 
   render(){
     return(
       <div>
-        <button className="register-image" onClick={this.switchVisible}>Register</button>
-        <div className="wrap">
-          <form className="form" onSubmit={this.submitSignUp} >
+        <button className="register" onClick={this.switchVisible}>Register</button>
+        { this.state.signupform ? <div className="wrap">
+          <form className="form" id="signup-form" onSubmit={this.submitSignUp} >
             <label>Register</label><br />
             <input name='first_name' type='text' placeholder='first name' /><br />
             <input name='last_name' type='text' placeholder='last name' /><br />
@@ -56,9 +45,10 @@ export default class SignUpForm extends Component {
             <input name='username' type='text' placeholder='username' /><br />
             <input name='password' type='password' placeholder='password' /><br />
             <input name='confirmation' type='password' placeholder='confirm password' /><br />
-            <input type='submit' value='submit'/>
+            <button type="submit" value="Submit">Submit</button>
+
           </form>
-        </div>
+        </div> : null}
       </div>
     )
   }
