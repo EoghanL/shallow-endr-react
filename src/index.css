@@ -1,3 +1,4 @@
+
 input[type="text"] {
   color: #808589;
   text-align: center;
@@ -123,7 +124,7 @@ li {
   top: 10px;
   right: 170px;
 }
-.register-image {
+.register {
   position: fixed;
   top: 15px;
   right: 10px;
@@ -137,7 +138,7 @@ li {
   position: fixed;
   border: none;
 }
-.register-image:hover {
+.register:hover {
   transform: scale(1.1);
 }
 html {

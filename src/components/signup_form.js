@@ -35,7 +35,7 @@ switchVisible(event) {
   render(){
     return(
       <div>
-        <button className="register-image" onClick={this.switchVisible}>Register</button>
+        <button className="register" onClick={this.switchVisible}>Register</button>
         { this.state.signupform ? <div className="wrap">
           <form className="form" id="signup-form" onSubmit={this.submitSignUp} >
             <label>Register</label><br />
