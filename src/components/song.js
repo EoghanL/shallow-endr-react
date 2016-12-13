@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 
 import addSong from '../actions/addSongToPlaylist'
 import castVote from '../actions/castVote'
+import removeVote from '../actions/removeVote'
 
 class Song extends Component{
   constructor(props){
@@ -17,36 +18,32 @@ class Song extends Component{
   }
 
   handleCheckBoxChange(event){
-    // event.preventDefault()
-    debugger
-    let test = 'not a ranked song'
+    event.preventDefault()
+    let current_user = this.props.current_user
+    let vote_weight = 1
+
+    let vote_info = { song_id: this.props.id, user_id: current_user, artist_id: this.props.artistId, weight: vote_weight }
 
     if (this.props.rankings != null) {
-      //there is already a ranking for this user/artist
       if (this.props.rankings.song_id === this.props.id) {
-        test = 'ranked song'
+        vote_info.ranking_id = this.props.rankings.id
+        this.props.removeVote(vote_info)
+        return
       }
-    } else {
-      //no rankings for this user/artist yet
-      test = 'there is no ranking for this artist/user'
     }
-
-    debugger
-
-    //song.id = event.target.parentElement.children[1].id
-    //user.id = this.props.current_user
-    //artist.id = still needs to be sent from rails
-    // let current_user = this.props.current_user
-    let current_user = 1
-    this.props.castVote({ song_id: this.props.id, user_id: current_user, artist_id: this.props.artistId})
+    this.props.castVote(vote_info)
   }
 
   render(){
+    let checked = ''
+    if (this.props.rankings != null) {
+      if (this.props.id == this.props.rankings.song_id) { checked = 'checked' }
+    }
     return (
       <div className="songs-with-checkboxes">
         <li>
-        <input type='checkbox' checked={this.props.ranked} onChange={this.handleCheckBoxChange} />
-        <div id={this.props.id} mbId={this.props.mbId} albumId={this.props.albumId}>{this.props.name}</div>
+        <input type='checkbox' checked={checked} onChange={this.handleCheckBoxChange} />
+        <div id={this.props.id} mbId={this.props.mbId} albumId={this.props.albumId}>{this.props.name} ({this.props.currentWeight})</div>
       </li>
       <br />
       </div>
@@ -57,6 +54,6 @@ function mapStateToProps(state){
   return { current_user: state.user_id, rankings: state.rankings }
 }
 function mapDispatchToProps(dispatch){
-  return bindActionCreators({ addSong: addSong, castVote: castVote }, dispatch)
+  return bindActionCreators({ addSong: addSong, castVote: castVote, removeVote: removeVote }, dispatch)
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Song)

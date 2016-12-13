@@ -10,7 +10,6 @@ export default function logUserIn(login_params){
         dataType: "json",
         headers: { authorization: localStorage.jwt }
       }).done(function(response){
-        debugger
         if(response.errors){
           alert(response.errors)
           dispatch({type: "FAILED_LOGIN", payload: response})

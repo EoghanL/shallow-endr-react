@@ -17,7 +17,6 @@ export default class SignUpForm extends Component {
       }
     })
     if (obj.password === obj.confirmation) {
-      debugger
       // document.getElementsByClassName('register-image')[0].style.display = '';
       this.props.onSignupClick(obj)
       $('#registerButton').hide()

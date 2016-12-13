@@ -42,7 +42,6 @@ class App extends Component {
     this.props.logUserOut()
   }
   handleSuggestionClick(){
-    debugger
     this.props.getSongsFromPlaylist(this.props.user_id)
   }
 
@@ -51,7 +50,6 @@ class App extends Component {
   }
 
   render() {
-    debugger
     return (
       <div>
         {localStorage.jwt ?
@@ -67,7 +65,7 @@ class App extends Component {
           </div>
         }
           <SearchBar />
-          {this.props.savedSongs ? <FutureSongList songs={this.props.savedSongs} /> : <p>yet to click button</p>}
+          {this.props.savedSongs ? <FutureSongList songs={this.props.savedSongs} /> : <p></p>}
           <ArtistList />
       </div>
     );

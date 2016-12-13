@@ -74,7 +74,7 @@ class ArtistList extends Component{
 }
 
 function mapStateToProps(state) {
-  return { artist: state.artist, newArtists: state.newArtists, existingArtists: state.existingArtists, songs: state.songs, rankings: state.rankings }
+  return { artist: state.artist, newArtists: state.newArtists, existingArtists: state.existingArtists, songs: state.songs, rankings: state.rankings, message: state.message }
 }
 
 function mapDispatchToProps(dispatch) {

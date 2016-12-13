@@ -8,7 +8,6 @@ export default function getSongsFromPlaylist(user_id){
       data: { future_song: { user_id: user_id}},
       headers: { authorization: localStorage.jwt }
     }).done(function(response){
-      debugger
       dispatch({type: 'VIEW_SAVED_SONGS', payload: response})
     })
   }

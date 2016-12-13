@@ -16,10 +16,12 @@ export default function users(state=[], action){
       return Object.assign({}, state, { artistToSpecify: null, artist: action.payload.artist, songs: action.payload.songs, rankings: action.payload.rankings, existingArtists: [], newArtists: [] })
     case 'VIEW_SAVED_SONGS':
       return Object.assign({}, state, { savedSongs: action.payload })
-    case 'CAST_VOTE':
-      return Object.assign({}, state, { rankings: action.payload })
     case 'GET_USER_ID':
       return Object.assign({}, state, { user_id: action.payload.user_id })
+    case 'CAST_VOTE':
+      return Object.assign({}, state, { rankings: action.payload.rankings, songs: action.payload.songs })
+    case 'REMOVE_VOTE':
+      return Object.assign({}, state, { rankings: action.payload.rankings, songs: action.payload.songs })
     default:
       return state
   }
