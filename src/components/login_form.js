@@ -35,8 +35,8 @@ class LoginForm extends Component{
           { this.state.loginform ? <div className="wrap">
             <form className="form" id="login-form" onSubmit={this.submitLoginInfo} >
               <label>Log In</label><br />
-              <input name='email' type='text' placeholder='email' /><br />
-              <input name='password' type='password' placeholder='password' /><br />
+              <input name='email' type='text' placeholder='email' required/><br />
+              <input name='password' type='password' placeholder='password' required/><br />
               <button type="submit" value="Submit">Submit</button>
             </form>
           </div> : null}
