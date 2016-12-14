@@ -18,6 +18,7 @@ class Song extends Component{
   }
 
   handleCheckBoxChange(event){
+    debugger
     event.preventDefault()
     let current_user = this.props.current_user
     let vote_weight = 1
@@ -42,7 +43,8 @@ class Song extends Component{
     return (
       <div className="songs-with-checkboxes">
         <li>
-        <input type='checkbox' checked={checked} onChange={this.handleCheckBoxChange} />
+        <input name='thing' type='checkbox' checked={checked} onChange={this.handleCheckBoxChange} />
+        <label HTMLfor='thing' onClick={this.handleCheckBoxChange}/>
         <div id={this.props.id} mbId={this.props.mbId} albumId={this.props.albumId}>{this.props.name} ({this.props.currentWeight})</div>
       </li>
       <br />
