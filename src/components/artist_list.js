@@ -43,7 +43,7 @@ class ArtistList extends Component{
 
     if (Array.isArray(this.props.newArtists) && this.props.newArtists.length > 0) {
       artistNameText = ""
-      newArtistsText = "Do you want to add a new artist?"
+      newArtistsText = "Do you want to add a new artist? Click to add."
       newArtists = this.props.newArtists.map(function(artist){
         return <li key={artist.id} name={artist.name} id={artist.id} onClick={that.createNewArtist}>{artist.name}</li>
       })
@@ -51,7 +51,7 @@ class ArtistList extends Component{
 
     if (Array.isArray(this.props.existingArtists) && this.props.existingArtists.length > 0) {
       artistNameText = ""
-      existingArtistsText= "Did you mean?"
+      existingArtistsText= "Did you mean? Click to select."
       existingArtists = this.props.existingArtists.map(function(artist){
         return <li key={artist.id} name={artist.name} id={artist.id} onClick={that.getExistingArtist}>{artist.display_name}</li>
       })
@@ -60,13 +60,13 @@ class ArtistList extends Component{
       <div className="artist-list">
         <h3>{artistNameText}</h3>
         {artistArray}
+        <p>{existingArtistsText}</p>
+        <ul>
+        {existingArtists}
+        </ul>
         <p>{newArtistsText}</p>
         <ul>
           {newArtists}
-        </ul>
-        <p>{existingArtistsText}</p>
-        <ul>
-          {existingArtists}
         </ul>
       </div>
     )
