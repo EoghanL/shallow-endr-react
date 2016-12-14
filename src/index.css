@@ -3,10 +3,44 @@ input[type="text"] {
   color: #808589;
   text-align: center;
 }
-input[type="checkbox"] {
+input[type=checkbox] {
+display:none;
+}
+
+input[type=checkbox] + label
+{
+background: url(images/img_for_button.png) no-repeat;
+background-size: 50%;
+height: 50px;
+width: 50px;
+display:inline-block;
+float: left;
+padding: 0 0 0 0px;
+transform: translate(0px, 6px);
+}
+input[type=checkbox]:checked + label
+{
+background: url(images/star-icon.png) no-repeat;
+background-size: 50%;
+height: 50px;
+width: 50px;
+float: left;
+display:inline-block;
+padding: 0 0 0 0px;
+}
+/*input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  background:url(images/img_for_button.png) no-repeat;
   zoom: 2.5;
   float: left;
 }
+input[type="checkbox"]:checked + label {
+  background:url("http://bit.ly/2gb7rqz") no-repeat;
+  zoom: 2.5;
+  float: left;
+}*/
 form input {
   font-size: 18px
 }
