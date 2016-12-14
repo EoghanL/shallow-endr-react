@@ -18,7 +18,7 @@ export default class SignUpForm extends Component {
         obj[element.name] = element.value
       }
     })
-    if (obj.password === obj.confirmation) {
+    if (obj.password === obj.password_confirmation) {
       // document.getElementsByClassName('register-image')[0].style.display = '';
       this.props.onSignupClick(obj)
       $('#registerButton').hide()
@@ -44,7 +44,7 @@ switchVisible(event) {
             <input name='email' type='text' placeholder='email' /><br />
             <input name='username' type='text' placeholder='username' /><br />
             <input name='password' type='password' placeholder='password' /><br />
-            <input name='confirmation' type='password' placeholder='confirm password' /><br />
+            <input name='password_confirmation' type='password' placeholder='confirm password' /><br />
             <button type="submit" value="Submit">Submit</button>
 
           </form>
