@@ -18,6 +18,7 @@ export default function users(state=[], action){
       return Object.assign({}, state, { savedSongs: action.payload })
     case 'GET_USER_ID':
       return Object.assign({}, state, { user_id: action.payload.user_id })
+      debugger
     case 'CAST_VOTE':
       return Object.assign({}, state, { rankings: action.payload.rankings, songs: action.payload.songs })
     case 'REMOVE_VOTE':
