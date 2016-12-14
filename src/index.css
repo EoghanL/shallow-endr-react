@@ -1,3 +1,6 @@
+:required {
+  /*background: red;*/
+}
 
 input[type="text"] {
   color: #808589;
@@ -155,8 +158,8 @@ li {
 }
 #welcome-back {
   position: fixed;
-  top: 10px;
-  right: 170px;
+  top: 17px;
+  right: 90px;
 }
 .register {
   position: fixed;
