@@ -1,5 +1,9 @@
 Arguments: 
+<<<<<<< HEAD
   /Users/nitinrw/.nvm/versions/node/v7.2.0/bin/node /usr/local/bin/yarn install
+=======
+  /usr/local/bin/node /usr/local/bin/yarn
+>>>>>>> efaef24b0ba0fe52123a014272f2c16b4db87265
 
 PATH: 
   /Users/nitinrw/.nvm/versions/node/v7.2.0/bin:/Users/nitinrw/.rvm/gems/ruby-2.3.0/bin:/Users/nitinrw/.rvm/gems/ruby-2.3.0@global/bin:/Users/nitinrw/.rvm/rubies/ruby-2.3.0/bin:/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/Users/nitinrw/.rvm/bin
@@ -26,8 +30,9 @@ npm manifest:
       "jquery": "^1.7.4",
       "jquery": "^3.1.1",
       "react": "^15.4.0",
-      "react-dom": "^15.4.0",
-      "react-redux": "^4.4.6",
+      "react-dom": "^15.3.0",
+      "react-redux": "^4.4.5",
+      "react-router": "^2.8.1",
       "redux": "^3.6.0",
       "redux-devtools-extension": "^1.0.0",
       "redux-thunk": "^2.1.0"
@@ -5401,3 +5406,7 @@ Lockfile:
 
 Trace: 
   Error: EACCES: permission denied, unlink '/Users/nitinrw/Development/code/ShallowEndr/reactShallowEndr/node_modules/acorn-globals/node_modules/.bin/acorn'
+<<<<<<< HEAD
+=======
+      at Error (native)
+>>>>>>> efaef24b0ba0fe52123a014272f2c16b4db87265
