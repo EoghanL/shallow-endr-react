@@ -40,24 +40,14 @@ class ArtistList extends Component{
     }
 
     let artist_list = <Artist />
+
     if (Array.isArray(this.props.newArtists) && this.props.newArtists.length > 0) {
       artistNameText = ""
-      newArtistsText = "Do you want to add a new artist? Click name to add."
+      newArtistsText = "Do you want to add a new artist? Click to add."
       newArtists = this.props.newArtists.map(function(artist){
-        let dateInfo = ''
-        let year = artist.date_begin.split('-')[0]
-        let allmusicLink = ''
-        if (artist.urls.allmusic) { allmusicLink = <a target="_blank" href={artist.urls.allmusic}>Allmusic Page</a> }
-
-        if (year != 2030) {
-          if (artist.type == "Person") {
-            dateInfo = `(Born: ${year})`
-          } else {
-            dateInfo = `(Formed: ${year})`
-          }
-        }
-        return <li className="list" key={artist.id}><span className='new-artist-line' name={artist.name} id={artist.id} onClick={that.createNewArtist}>{artist.name} {dateInfo}</span>&nbsp;{allmusicLink}</li>
+        return <li className="list" key={artist.id} name={artist.name} id={artist.id} onClick={that.createNewArtist}>{artist.name}</li>
       })
+    }
 
     if (Array.isArray(this.props.existingArtists) && this.props.existingArtists.length > 0) {
       artistNameText = ""

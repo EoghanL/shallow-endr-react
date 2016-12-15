@@ -1,5 +1,5 @@
 {
-  "name": "reactShallowEndr",
+  "name": "react-shallow-endr",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
@@ -22,5 +22,16 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcimmediato/ShallowEndr/reactShallowEndr/"
+  },
+  "author": "Team Cena",
+  "license": "ISC",
+  "engines": {
+    "node": "6.6.0"
   }
 }
