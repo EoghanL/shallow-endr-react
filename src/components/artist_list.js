@@ -45,7 +45,7 @@ class ArtistList extends Component{
       artistNameText = ""
       newArtistsText = "Do you want to add a new artist? Click to add."
       newArtists = this.props.newArtists.map(function(artist){
-        return <li key={artist.id} name={artist.name} id={artist.id} onClick={that.createNewArtist}>{artist.name}</li>
+        return <li className="list" key={artist.id} name={artist.name} id={artist.id} onClick={that.createNewArtist}>{artist.name}</li>
       })
     }
 
@@ -53,7 +53,7 @@ class ArtistList extends Component{
       artistNameText = ""
       existingArtistsText= "Did you mean? Click to select."
       existingArtists = this.props.existingArtists.map(function(artist){
-        return <li key={artist.id} name={artist.name} id={artist.id} onClick={that.getExistingArtist}>{artist.display_name}</li>
+        return <li className="list" key={artist.id} name={artist.name} id={artist.id} onClick={that.getExistingArtist}>{artist.display_name}</li>
       })
     }
     return (

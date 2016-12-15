@@ -178,6 +178,15 @@ li {
 .register:hover {
   transform: scale(1.1);
 }
+
+.list {
+  cursor: pointer;
+}
+
+.list:hover {
+  color: rgb(86, 132, 174)
+}
+
 html {
   background: url(images/new.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -187,7 +196,6 @@ html {
   max-width: 100%;
 }
 .wrap {
-  margin: 0;
   color: white;
   background: rgb(117, 155, 176);
   font: 600 20px/22px 'Open Sans', sans-serif;
