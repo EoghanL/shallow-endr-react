@@ -3,7 +3,7 @@ import $ from 'jquery'
 export default function getUserId(){
   return function(dispatch){
     $.ajax({
-      url: 'http://localhost:3000/users/getUserId',
+      url: 'https://shallow-endr-rails.herokuapp.com/users/getUserId',
       type: 'GET',
       data: { user: { jwt: localStorage.jwt } },
       dataType: "json",
