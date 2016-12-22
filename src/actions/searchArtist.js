@@ -3,7 +3,7 @@ import $ from 'jquery';
 export default function searchArtist(searchTerm){
   return function(dispatch){
     $.ajax({
-      url: "https://shallow-endr-rails.herokuapp.com/search",
+      url: "http://localhost:3000/search",
       type: "GET",
       data: { artist: { searchTerm: searchTerm } },
       headers: { authorization: localStorage.jwt }

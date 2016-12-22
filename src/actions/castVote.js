@@ -3,7 +3,7 @@ import $ from 'jquery'
 export default function castVote(ranking){
   return function(dispatch){
     $.ajax({
-      url: "https://shallow-endr-rails.herokuapp.com/rankings",
+      url: "http://localhost:3000/rankings",
       type: "POST",
       headers: { authorization: localStorage.jwt },
       data: { ranking: ranking }

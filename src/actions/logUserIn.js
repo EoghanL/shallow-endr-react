@@ -4,7 +4,7 @@ import { browserHistory } from 'react-router'
 export default function logUserIn(login_params){
     return function(dispatch){
       $.ajax({
-        url: 'https://shallow-endr-rails.herokuapp.com/sessions/login',
+        url: 'http://localhost:3000/sessions/login',
         type: "POST",
         data: { auth: { email: login_params.email, password: login_params.password } },
         dataType: "json",

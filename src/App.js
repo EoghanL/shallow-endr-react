@@ -14,9 +14,9 @@ import logUserOut from './actions/logUserOut'
 import signUserUp from './actions/signUserUp'
 import getSongs from './actions/getSongs'
 import getSongsFromPlaylist from './actions/getSongsFromPlaylist'
+import checkLoggedIn from './actions/checkLoggedIn'
 
 import User from './components/users'
-import Home from './components/home.js'
 import ArtistList from './components/artist_list'
 import SongList from './components/song_list'
 import FutureSongList from './components/future_song_list'
@@ -34,7 +34,7 @@ class App extends Component {
 
   componentWillMount(){
     //check to see if a user is logged in with an action and set state accordingly
-    this.props.getUserId()
+    checkLoggedIn()
     browserHistory.push('/')
   }
 

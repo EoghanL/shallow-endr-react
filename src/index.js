@@ -5,7 +5,6 @@ import { Provider } from 'react-redux';
 
 import App from './App';
 import User from './components/users'
-import Home from './components/home'
 import Artist from './components/artist'
 import configureStore from './stores/configureStore'
 import './index.css';

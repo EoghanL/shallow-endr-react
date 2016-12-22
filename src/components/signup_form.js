@@ -22,9 +22,8 @@ export default class SignUpForm extends Component {
     if (obj.password === obj.password_confirmation) {
       this.props.onSignupClick(obj)
       $('#registerButton').hide()
-
     } else {
-      alert('yo pass is fd')
+      alert('Invalid password')
     }
   }
 

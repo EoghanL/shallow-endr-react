@@ -3,7 +3,7 @@ import $ from 'jquery'
 export default function getArtist(id){
   return function(dispatch){
     $.ajax({
-      url: `https://shallow-endr-rails.herokuapp.com/artists/${id}`,
+      url: `http://localhost:3000/artists/${id}`,
       type: 'GET',
       headers: { authorization: localStorage.jwt }
     }).done(function(response){

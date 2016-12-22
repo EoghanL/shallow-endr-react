@@ -3,7 +3,7 @@ import $ from 'jquery'
 export default function removeVote(vote_info){
   return function(dispatch){
     $.ajax({
-      url: `https://shallow-endr-rails.herokuapp.com/rankings/delete/${vote_info.ranking_id}`,
+      url: `http://localhost:3000/rankings/delete/${vote_info.ranking_id}`,
       type: "POST",
       headers: { authorization: localStorage.jwt },
       data: { ranking: vote_info }

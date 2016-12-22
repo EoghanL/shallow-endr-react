@@ -3,7 +3,7 @@ import $ from 'jquery';
 export default function getSongs(artist){
   return function(dispatch){
     $.ajax({
-      url: "https://shallow-endr-rails.herokuapp.com/artists",
+      url: "http://localhost:3000/artists",
       type: "POST",
       data: { artist: artist },
       headers: { authorization: localStorage.jwt }
