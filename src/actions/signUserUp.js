@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import logUserIn from './logUserIn';
+import { browserHistory } from 'react-router'
 
 export default function signUserUp(obj){
   return function(dispatch){
@@ -9,11 +9,15 @@ export default function signUserUp(obj){
         data: { user: obj },
         dataType: 'JSON'
     }).done(function(response){
-      //need to log user in here if they successfully sign up
-      //importing and trying to use the logUserIn function isn't working correctly
-      debugger
-      //response returns the user_id as response.id, need to change this into a jwt and let app know someone
-      //is logged in?
+      if(response.errors){
+        alert(response.errors)
+        dispatch({type: "FAILED_LOGIN", payload: response})
+      }
+      else{
+        localStorage.setItem('jwt', response.jwt)
+        browserHistory.push('/home')
+        dispatch({type: "LOGGING_IN", payload: response})
+      }
     })
   }
 }
