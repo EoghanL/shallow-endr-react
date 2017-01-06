@@ -45,6 +45,7 @@ class ArtistList extends Component{
       artistNameText = ""
       newArtistsText = "Do you want to add a new artist? Click name to add."
       newArtists = this.props.newArtists.map(function(artist){
+        debugger
         let dateInfo = ''
         let year = artist.date_begin.split('-')[0]
         let allmusicLink = ''
@@ -57,6 +58,7 @@ class ArtistList extends Component{
             dateInfo = `(Formed: ${year})`
           }
         }
+        debugger
         return (
           <li className="list" key={artist.id}>
             <span
