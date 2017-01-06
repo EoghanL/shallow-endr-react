@@ -4,7 +4,7 @@ import { browserHistory } from 'react-router'
 export default function signUserUp(obj){
   return function(dispatch){
     $.ajax({
-        url: 'http://localhost:3000/users/signup',
+        url: 'https://shallow-endr-rails.herokuapp.com/users/signup',
         type: 'POST',
         data: { user: obj },
         dataType: 'JSON'
