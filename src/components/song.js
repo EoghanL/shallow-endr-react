@@ -18,7 +18,6 @@ class Song extends Component{
   }
 
   handleCheckBoxChange(event){
-    debugger
     event.preventDefault()
     let current_user = this.props.current_user
     let vote_weight = 1
