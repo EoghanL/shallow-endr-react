@@ -58,7 +58,7 @@ class ArtistList extends Component{
         }
         return <li className="list" key={artist.id}><span className='new-artist-line' name={artist.name} id={artist.id} onClick={that.createNewArtist}>{artist.name} {dateInfo}</span>&nbsp;{allmusicLink}</li>
       })
-
+    }
     if (Array.isArray(this.props.existingArtists) && this.props.existingArtists.length > 0) {
       artistNameText = ""
       existingArtistsText= "Did you mean? Click to select."
