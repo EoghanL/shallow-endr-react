@@ -60,7 +60,7 @@ class ArtistList extends Component{
         return (
           <li className="list" key={artist.id}>
             <span
-              className='new-artist-line' 
+              className='new-artist-line'
               name={artist.name}
               id={artist.id}
               onClick={that.createNewArtist}>
@@ -68,6 +68,7 @@ class ArtistList extends Component{
             </span>
           &nbsp;{allmusicLink}
         </li>
+      )
       })
     }
 
