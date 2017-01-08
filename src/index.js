@@ -4,7 +4,6 @@ import { Router, Route, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 
 import App from './App';
-import User from './components/users'
 import Artist from './components/artist'
 import configureStore from './stores/configureStore'
 import './index.css';
@@ -18,7 +17,6 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>
       <Route path='/' component={App}>
-        <Route path='/home' component={User} />
         <Route path='/results' component={Artist} />
       </Route>
     </Router>

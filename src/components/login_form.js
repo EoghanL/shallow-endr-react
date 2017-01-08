@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import $ from 'jquery'
 
 import logUserIn from "../actions/logUserIn"
 
@@ -12,8 +11,6 @@ class LoginForm extends Component{
     this.switchVisible = this.switchVisible.bind(this)
     this.state = {loginform: false}
   }
-
-  // $('#login-form').hide()
 
   submitLoginInfo(event){
     event.preventDefault()

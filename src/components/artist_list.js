@@ -39,26 +39,22 @@ class ArtistList extends Component{
       artistArray = <Artist id={this.props.artist.id} name={this.props.artist.display_name} songs={this.props.songs} rankings={this.props.rankings} />
     }
 
-    let artist_list = <Artist />
-
     if (Array.isArray(this.props.newArtists) && this.props.newArtists.length > 0) {
       artistNameText = ""
       newArtistsText = "Do you want to add a new artist? Click name to add."
       newArtists = this.props.newArtists.map(function(artist){
-        debugger
         let dateInfo = ''
         let year = artist.date_begin.split('-')[0]
         let allmusicLink = ''
         if (artist.urls.allmusic) { allmusicLink = <a target="_blank" href={artist.urls.allmusic}>Allmusic Page</a> }
 
-        if (year != 2030) {
-          if (artist.type == "Person") {
+        if (year !== 2030) {
+          if (artist.type === "Person") {
             dateInfo = `(Born: ${year})`
           } else {
             dateInfo = `(Formed: ${year})`
           }
         }
-        debugger
         return (
           <li className="list" key={artist.id}>
             <span

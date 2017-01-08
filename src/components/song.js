@@ -37,7 +37,7 @@ class Song extends Component{
   render(){
     let checked = ''
     if (this.props.rankings != null) {
-      if (this.props.id == this.props.rankings.song_id) { checked = 'checked' }
+      if (this.props.id === this.props.rankings.song_id) { checked = 'checked' }
     }
     return (
       <div className="songs-with-checkboxes">

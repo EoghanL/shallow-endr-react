@@ -109,6 +109,19 @@ li {
   width: 70%;
   align-self: center;
 }
+.loading-text-area {
+  background: rgba(241, 246, 249, .8);
+  width: 70%;
+  position: relative;
+  top: 100px;
+  clear: both;
+  margin: 0 auto;
+  font-size: 30px;
+  text-align: center;
+}
+.loading-image {
+  background: url(images/icon.png) no-repeat;
+}
 ::-webkit-input-placeholder {
   text-align: center;
   color: #808589;

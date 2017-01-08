@@ -1,5 +1,4 @@
 import './App.css';
-import $ from 'jquery'
 
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router'
@@ -16,13 +15,11 @@ import getSongs from './actions/getSongs'
 import getSongsFromPlaylist from './actions/getSongsFromPlaylist'
 import checkLoggedIn from './actions/checkLoggedIn'
 
-import User from './components/users'
 import ArtistList from './components/artist_list'
-import SongList from './components/song_list'
-import FutureSongList from './components/future_song_list'
 import SearchBar from './components/search_bar'
 import LoginForm from './components/login_form'
 import SignUpForm from './components/signup_form'
+import LoadingIndicator from './components/loading_indicator'
 
 class App extends Component {
   constructor(props){
@@ -64,7 +61,7 @@ class App extends Component {
           </div>
         }
           <SearchBar />
-          {this.props.savedSongs ? <FutureSongList songs={this.props.savedSongs} /> : <p></p>}
+          <LoadingIndicator />
           <ArtistList />
       </div>
     );
@@ -88,15 +85,3 @@ function mapDispatchToProps(dispatch){
 }
 
 export default connect(mapStateToProps ,mapDispatchToProps)(App);
-
-{/* <Home
-   handleClick={this.handleClick}
-   searchClick={this.handleSearchSubmit}
-   results={this.props.results}
-   artists={this.props.artistToSpecify}
-   getSongs={this.props.getSongs}
-   songs={this.props.songs}
-   artist={this.props.artist}
-   newArtists={this.props.newArtists}
-   existingArtists={this.props.existingArtists}
-/> */}

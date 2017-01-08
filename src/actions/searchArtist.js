@@ -1,16 +1,18 @@
 import $ from 'jquery';
 
 export default function searchArtist(searchTerm){
-  return function(dispatch){
-    $.ajax({
+    const request = $.ajax({
       url: "https://shallow-endr-rails.herokuapp.com/search",
       type: "GET",
       data: { artist: { searchTerm: searchTerm } },
       headers: { authorization: localStorage.jwt }
-    }).done(function(response){
+    })
+
+    return (dispatch) => {
+      dispatch({type: 'GET_ARTISTS'})
+      request.done((response) => {
         if(response.songs){ dispatch({type: 'GET_SONGS', payload: response}) }
         else { dispatch({type: 'SEARCH_RESULTS', payload: response}) }
-      }
-    )
-  }
+      })
+    }
 }

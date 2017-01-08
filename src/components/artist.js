@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import SongList from './song_list'
 
 export const Artist = (props) => {
@@ -9,5 +9,3 @@ export const Artist = (props) => {
     </div>
   )
 }
-
-//export default Artist
